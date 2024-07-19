@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+</head>
+<body>
+    <div class="container">
+            <aside class="sidebar">
+                <div class="logo">
+                    <img src="./assets/images/logo.png" alt="Accuprice Logo" class="image">
+                    <button class="toggle-btn"><img src="./assets/images/chevrons-left.svg"></button>
+                </div>
+                <div class="line"><hr></div>
+                <ul class="top-links ul-paddings">
+                    <li>
+                        <img src="./assets/images/home.svg" alt="Home Icon">
+                        <span><a>Home</a></span>
+                    </li>
+                    <li>
+                        <img src="./assets/images/Line_up.svg" alt="Configuration Icon">
+                        <span><a>Configuration</a></span>
+                    </li>
+                    <li>
+                        <img src="./assets/images/scan.svg" alt="Subscriptions Icon">
+                        <span><a>Subscriptions</a></span>
+                    </li>
+                    <li class="active">
+                        <img src="./assets/images/Setting.svg" alt="Settings Icon">
+                        <span><a>Settings</a></span>
+                    </li>
+                    <li>
+                        <img src="./assets/images/book.svg" alt="User Guide Icon">
+                        <span><a>User Guide</a></span>
+                    </li>
+                    
+                </ul>
+
+
+                    <div class="line"><hr></div>
+
+                <ul class="logout-section ul-paddings">
+            
+                
+                    <li class="logout">
+
+
+    <img src="./assets/images/Sign_out_squre_light.svg" alt="Log Out Icon">
+    <span>Log Out</span>
+
+                    </li>
+                </ul>
+            </aside>
+        <main class="main-content">
+            <header class="header">
+                <div class="profile">
+                    <img src="./assets/images/profile-pic.png" alt="Hunter Singh">
+                    <div class="profile-info">
+                        <h2>Hunter Singh</h2>
+                        <p>huntersingh@gmail.com</p>
+                    </div>
+                </div>
+                <div class="cart">
+                    <img src="./assets/images/cart.svg" alt="">
+                </div>
+              
+            </header>
+            <div class="form-area">
+
+            <div class="setting-container">
+                <div class="set">
+        
+                <h1>Settings</h1>
+<div class="form-area-line"><hr></div>
+
+
+
+
+                <div class="main-form-group">
+
+                <div class="form-group">
+                    <label for="first-name">First name</label>
+                    <input type="text" id="first-name" value="Hunter">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last name</label>
+                    <input type="text" id="last-name" value="Singh">
+                </div>
+
+                <div class="form-group" >
+                    <label for="email">Email</label>
+                    <div class="email-group">
+                        <img src="./assets/images/email-ico.svg">
+                        <input type="email" id="email" value="huntersingh@email.com">
+                    </div>
+                </div>
+            </div>
+
+                <div class="connection-container">
+                <h1>Connections</h1>
+<div class="form-area-line"><hr></div>
+
+<div class="linkgroup">
+
+    <div class="input-group">
+        <div class="icon google-icon"></div>
+        <input type="text" value="huntersingh@gmail.com" readonly>
+        <button class="link-button"><img src="./assets/images/Link.svg"></button>
+    </div>
+    <button class="delete-button"><img src="./assets/images/TrashCan.svg"></button>
+
+</div>
+<div class="linkgroup">
+
+    <div class="input-group">
+        <div class="icon facebook-icon"></div>
+        <input type="text" value="facebook.com/profile/hunter" readonly>
+        <button class="link-button"><img src="./assets/images/Link.svg"></button>
+
+    </div>
+    <button class="delete-button"><img src="./assets/images/TrashCan.svg"></button>
+</div>
+                </div>
+
+
+
+
+
+
+<div class="updates-container">
+
+                <div class="updates">
+                    <h2>Updates</h2>
+<div class="form-area-line"><hr></div>
+
+                    <label>
+                        <input type="checkbox">
+                        Receive updates on Accuripicy on email
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Receive updates on new edition release on email
+                    </label>
+                </div>
+                <div class="actions">
+                    <div>
+                        <a href="#">Reset password</a>
+                        <a href="#">Delete Account</a>
+                    </div>
+
+                </div>
+            </div>
+</div>
+
+            <div class="set-2">
+                <div class="profile-pic">
+                    <div class="avatar"><img src="./assets/images/profile-pic.png"></div>
+                    <button class="upload">Upload</button>
+                    <button class="remove">Remove</button>
+                </div>
+            </div>
+        
+            </div>
+            <div class="bottom-actions">
+                <button class="cancel">Cancel</button>
+                <button class="save">Save</button>
+            </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+    <script>
+        const sidebar = document.querySelector('.sidebar');
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const ul =document.querySelectorAll('.sidebar ul');
+        
+        toggleBtn.addEventListener('click', () => {
+            toggleBtn.classList.toggle('toggle-center')
+            toggleBtn.classList.toggle('toggle-btn')
+            sidebar.classList.toggle('closed');
+            for (i=0;i<ul.length; i++)
+        {
+            ul[i].classList.toggle('ul-paddings');
+            ul[i].classList.toggle('ul-paddings-not');
+
+        }
+
+        });
+    </script>
+</body>
+</html>
